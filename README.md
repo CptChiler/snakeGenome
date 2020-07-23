@@ -25,18 +25,19 @@ kraken2-build --download-library bacteria --threads 100 --db NCBI_bac_tax
 ```
 
 ```bash
-
-
+prokka --setupdb
+prokka --listdb  
 ```
 in `config.json` you can change path to your database
 
-> {
+```bash
+{
 	"md": "normal",
 	"db1": "kraken2_db",
-	"db2": "prokka_db",
+	"db2": "diamond_uniprot_db",
 	"threads": 100
 }
-
+```
 
 ### check pipe
 
