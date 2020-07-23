@@ -1,0 +1,6 @@
+{
+	"md": "normal",
+	"db1": "/Databases/kraken2/bac_kraken",
+	"db2": "/Databases/prokka/uni_bac.dmnd",
+	"threads": 100
+}
