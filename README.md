@@ -28,7 +28,7 @@ kraken2-build --download-library bacteria --threads 100 --db NCBI_bac_tax
 
 Clone the repo.
 
-Put your Illumina data in `genomes/` and name them like this.
+Put your Illumina data in `reads/` and name them like this.
 
 >Illumina reads: `TP1234_R1.fastq.bz2` and `TP1234_R2.fastq.bz2` 
 
