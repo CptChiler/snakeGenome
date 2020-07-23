@@ -50,7 +50,7 @@ Put your Illumina data in folder `reads/` inside of repo and name them like this
 in `config.json` you can change the mode of the assemblie with the 3 possible modes (see more info _Unicycler_).
 
 > conservative   
-normal  -> default
+normal  -> default 
 bold
 
 ```bash
