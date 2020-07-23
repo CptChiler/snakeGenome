@@ -24,11 +24,25 @@ abricate --setupdb
 kraken2-build --download-library bacteria --threads 100 --db NCBI_bac_tax
 ```
 
-### run
+```bash
+
+
+```
+in `config.json` you can change path to your database
+
+> {
+	"md": "normal",
+	"db1": "kraken2_db",
+	"db2": "prokka_db",
+	"threads": 100
+}
+
+
+### check pipe
 
 Clone the repo.
 
-Put your Illumina data in `reads/` and name them like this.
+Put your Illumina data in folder `reads/` inside of repo and name them like this.
 
 >Illumina reads: `TP1234_R1.fastq.bz2` and `TP1234_R2.fastq.bz2` 
 
@@ -38,21 +52,17 @@ in `config.json` you can change the mode of the assemblie with the 3 possible mo
 normal  -> default
 bold
 
-Then:
-
-check snakemake
-
 ```bash
 snakemake --configfile config.json --forceall --dag | dot -Tpdf > dag.pdf
 ```
 
+### run pipe
 
 ```bash
-source activate bio37
 cd ...Illumina_genome_pipe/
 snakemake --configfile config.json --cores 100
 ```
-Enjoy the results
+Enjoy the results in `/results`
 
 
 ### Troubleshooting
