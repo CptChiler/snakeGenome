@@ -1,6 +1,6 @@
 {
 	"md": "normal",
-	"db1": "/Databases/kraken2/bac_kraken",
-	"db2": "/Databases/prokka/uni_bac.dmnd",
+	"db1": "/path_to/NCBI_bac_tax",
+	"db2": "/path_to/diamond_uniprot_db",
 	"threads": 100
 }
