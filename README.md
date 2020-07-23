@@ -15,26 +15,34 @@
 - kraken2
 - abricate
 - prokka
+- ideel
+- diamond
+- krona
 
 ### Setup databases
 
 ```bash
-abricate --check
 abricate --setupdb
+abricate --check
+prokka --setupdb
+prokka --listdb  
+```
+
+```bash
 kraken2-build --download-library bacteria --threads 100 --db NCBI_bac_tax
 ```
 
 ```bash
-prokka --setupdb
-prokka --listdb  
+diamond makedb --in uniport.faa -d diamond_uniprot_db --threads 100
 ```
+
 in `config.json` you can change path to your database
 
 ```bash
 {
 	"md": "normal",
-	"db1": "kraken2_db",
-	"db2": "diamond_uniprot_db",
+	"db1": "/path_to/NCBI_bac_tax",
+	"db2": "/path_to/diamond_uniprot_db",
 	"threads": 100
 }
 ```
@@ -50,7 +58,7 @@ Put your Illumina data in folder `reads/` inside of repo and name them like this
 in `config.json` you can change the mode of the assemblie with the 3 possible modes (see more info _Unicycler_).
 
 > conservative   
-normal  -> default 
+normal = default 
 bold
 
 ```bash
