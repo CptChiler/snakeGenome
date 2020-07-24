@@ -33,7 +33,7 @@ kraken2-build --download-library bacteria --threads 100 --db NCBI_bac_tax
 ```
 
 ```bash
-diamond makedb --in uniport.faa -d diamond_uniprot_db --threads 100
+diamond makedb --in uniprot.faa -d diamond_uniprot_db --threads 100
 ```
 
 in `config.json` you can change path to your database
